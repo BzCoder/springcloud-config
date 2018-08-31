@@ -6,12 +6,24 @@ spring:
       server:
         git:
           uri: https://github.com/BzCoder/config-repo
-          username:
-          password:
+          username: 395927613@qq.com
+          password: Bz600230
           basedir: D:/Config/basedir
+  rabbitmq:
+    host: 192.168.15.128
+    username: guest
+    password: guest
+    port: 5672
+# 开放 bus-refresh 接口，以便配合 bus 实现 配置的动态刷新
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://localhost:8762/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
